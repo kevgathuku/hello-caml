@@ -1,13 +1,30 @@
+open Core
+open Format;;
+
 (* Print a msg from a reason lib *)
-print_endline Lib.Hello.normal_greeting;;
+print_endline Lib.Hello.normal_greeting
 
-Graphics.open_graph " 640x480";;
+let rec destutter list =
+  match list with
+  | [] as l -> l
+  | [ _ ] as l -> l
+  | hd :: (hd' :: _ as tl) ->
+      if hd = hd' then destutter tl else hd :: destutter tl
 
-for i = 12 downto 1 do
-  let radius = i * 20 in
-  Graphics.set_color (if i mod 2 = 0 then Graphics.red else Graphics.yellow);
-  Graphics.fill_circle 320 240 radius
-done
+(* Works on int list only for now, due to the = operator *)
+let result = destutter [ 1; 2; 2; 3; 4; 4; 4; 5 ]
+
+let print_list f lst =
+  let rec print_elements = function
+    | [] -> ()
+    | h :: t ->
+        f h;
+        print_string ";";
+        print_elements t
+  in
+  print_string "[";
+  print_elements lst;
+  print_string "] \n"
 ;;
 
-read_line ()
+print_list print_int result
