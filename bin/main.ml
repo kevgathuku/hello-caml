@@ -9,4 +9,20 @@ print_endline Lib.Hello.normal_greeting
 (* Destutter Works on int list only for now, due to the = operator *)
 let duplicates = [ 1; 2; 2; 3; 4; 4; 4; 5 ];;
 
-print_list print_int (destutter duplicates)
+print_list print_int (destutter duplicates);;
+
+(* Print a 2d point - custom type *)
+print_point { x = 3.; y = 5. }
+
+let result_1 =
+  is_inside_scene { x = 3.; y = 7. }
+    [ Circle { center = { x = 4.; y = 4. }; radius = 0.5 } ]
+
+let result_2 =
+  is_inside_scene { x = 3.; y = 7. }
+    [ Circle { center = { x = 4.; y = 4. }; radius = 5.0 } ]
+;;
+
+print_endline ("Result 1: " ^ string_of_bool result_1);;
+
+print_endline ("Result 2: " ^ string_of_bool result_2);;
