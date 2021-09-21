@@ -11,6 +11,8 @@ dune exec ./bin/main.exe
 ```
 
 Nice to have packages for development:
+- base
+- core
 - ocamlformat
 - ocaml-lsp-server
 - utop
