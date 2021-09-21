@@ -2,9 +2,8 @@ type point2d = { x : float; y : float }
 
 let p = { x = 3.; y = -4. }
 
-let print_point { x; y } =
-  print_string
-    ("{ x: " ^ string_of_float x ^ " y: " ^ string_of_float y ^ " }\n")
+let to_string { x; y } =
+    "{ x: " ^ string_of_float x ^ " y: " ^ string_of_float y ^ " }\n"
 
 let magnitude { x; y } = sqrt ((x ** 2.) +. (y ** 2.))
 

@@ -17,7 +17,7 @@ let sum_list = sum (destutter duplicates);;
 print_endline ("Sum of destuttered list: " ^ string_of_int sum_list);
 
 (* Print a 2d point - custom type *)
-print_point { x = 3.; y = 5. }
+print_endline (to_string { x = 3.; y = 5. })
 
 let result_1 =
   is_inside_scene { x = 3.; y = 7. }
