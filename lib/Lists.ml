@@ -20,3 +20,9 @@ let print_list f lst =
   print_string "[";
   print_elements lst;
   print_string "] \n"
+
+(* Imperative summing of elements in a list *)
+let sum list =
+  let counter = ref 0 in
+  List.iter list ~f:(fun x -> counter := !counter + x);
+  !counter
