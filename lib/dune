@@ -1,4 +1,4 @@
 (library
  (name lib)
- (synopsis "Provides a greeting function")
- (libraries core))
+ (synopsis "Common utility libraries")
+ (libraries core base stdio))

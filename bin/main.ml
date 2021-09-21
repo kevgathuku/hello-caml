@@ -1,6 +1,7 @@
 open Core
 open Format
 open Lib.Lists
+open Lib.Sum
 open Lib.Variants;;
 
 (* Print a msg from a reason lib *)
@@ -32,3 +33,6 @@ print_endline ("Result 1: " ^ string_of_bool result_1);;
 
 print_endline ("Result 2: " ^ string_of_bool result_2)
 
+(* Read & sum numbers from stdin
+   Press Ctrl-D to trigger the sum of provided numbers *)
+let () = printf "Total: %F\n" (read_and_accumulate 0.)
