@@ -9,10 +9,10 @@ print_endline Lib.Hello.normal_greeting
 (* Destutter Works on int list only for now, due to the = operator *)
 let duplicates = [ 1; 2; 2; 3; 4; 4; 4; 5 ];;
 
-print_list print_int (destutter duplicates)
+print_list print_int (remove_sequential_duplicates duplicates)
 
 (* sum a list using imperative code *)
-let sum_list = sum (destutter duplicates);;
+let sum_list = sum (remove_sequential_duplicates duplicates);;
 
 print_endline ("Sum of destuttered list: " ^ string_of_int sum_list);
 
@@ -31,3 +31,4 @@ let result_2 =
 print_endline ("Result 1: " ^ string_of_bool result_1);;
 
 print_endline ("Result 2: " ^ string_of_bool result_2)
+
