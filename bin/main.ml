@@ -11,7 +11,10 @@ print_endline Lib.Hello.normal_greeting
 (* Destutter Works on int list only for now, due to the = operator *)
 let duplicates = [ 1; 2; 2; 3; 4; 4; 4; 5 ];;
 
-print_list print_int (remove_sequential_duplicates duplicates)
+print_endline
+  ("remove_sequential_duplicates: "
+  ^ print_list ~stringify:Int.to_string
+      (remove_sequential_duplicates duplicates))
 
 (* sum a list using imperative code *)
 let sum_list = sum (remove_sequential_duplicates duplicates);;
@@ -36,8 +39,7 @@ print_endline ("Result 2: " ^ string_of_bool result_2);;
 
 print_endline ("Area of ring: " ^ Float.to_string (area_of_ring 1. 3.));;
 
-print_endline
-  ("upcase_first_entry: " ^ upcase_first_entry "one,two,three")
+print_endline ("upcase_first_entry: " ^ upcase_first_entry "one,two,three")
 
 (* Read & sum numbers from stdin
    Press Ctrl-D to trigger the sum of provided numbers *)
