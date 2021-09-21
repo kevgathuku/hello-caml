@@ -2,6 +2,7 @@ open Core
 open Format
 open Lib.Lists
 open Lib.Sum
+open Lib.Variables
 open Lib.Variants;;
 
 (* Print a msg from a reason lib *)
@@ -31,7 +32,12 @@ let result_2 =
 
 print_endline ("Result 1: " ^ string_of_bool result_1);;
 
-print_endline ("Result 2: " ^ string_of_bool result_2)
+print_endline ("Result 2: " ^ string_of_bool result_2);;
+
+print_endline ("Area of ring: " ^ Float.to_string (area_of_ring 1. 3.));;
+
+print_endline
+  ("upcase_first_entry: " ^ upcase_first_entry "one,two,three")
 
 (* Read & sum numbers from stdin
    Press Ctrl-D to trigger the sum of provided numbers *)
