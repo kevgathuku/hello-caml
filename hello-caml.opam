@@ -23,6 +23,5 @@ build: [
 depends: [
   "dune"
   "reason"
-  "graphics" { >= "1.9.1" }
   "ocamlformat" { >= "0.19.0" }
 ]
