@@ -1,5 +1,10 @@
 Starter project with OCaml + Reason
 
+Install the development dependencies
+```sh
+make dev-deps
+```
+
 To build the project:
 ```sh
 dune build
