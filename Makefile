@@ -11,3 +11,8 @@ build:
 .PHONY : dev-deps
 dev-deps :
 	opam install . --deps-only --yes
+
+# Run the app
+.PHONY : run
+run :
+	dune exec ./bin/main.exe
