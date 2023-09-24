@@ -1,5 +1,10 @@
 Starter project with OCaml + Reason
 
+Create a local opam switch
+```sh
+make create-switch
+```
+
 Install the development dependencies
 ```sh
 make dev-deps
